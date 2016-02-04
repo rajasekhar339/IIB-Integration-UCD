@@ -22,14 +22,14 @@
 					<arg value="${workspaces.dir}" />
 					<!--barfile generated path-->
 					<arg value="-b" />
-					<arg value="${bar.loc}\@{pname}\@{pName}.msgflow.generated.bar" />
+					<arg value="${workspaces.dir}\@{pName}.msgflow.generated.bar" />
 					<!--project Name-->
 					<arg value="-p" />
 					<arg value="@{pName}" />
 					<!--Message flows for its corresponding projects which has given in cvsCheckout.properties-->
 					<arg value="-o" />
-					<arg line="@{pName}\${@{pName}.flow_name}" />
-					<arg line="@{pName}\IAM_Demo_Compute.esql" />
+					<arg line="@{workspaces.dir}\${@{pName}.flow_name}" />
+					<arg line="@{workspaces.dir}\IAM_Demo_Compute.esql" />
 				<arg value="-deployAsSource" />
 				</exec>	
 				</sequential>
